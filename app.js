@@ -18,11 +18,14 @@ function displayTeachers(teachers) {
   const teachersList = document.querySelector("#teachers-list");
   for (const teacher of teachers) {
     teachersList.insertAdjacentHTML(
-      "beforeend", `      
-      <li>
-        ${teacher.name} - ${teacher.mail}
-      </li>
-      `
+      "beforeend",
+      /*html*/ `
+      <article class="grid-item">
+        <img src="${teacher.image}" alt="${teacher.name}" />
+        <h2>${teacher.name}</h2>
+        <p>${teacher.title}</p>
+      </article>
+`
     );
   }
 }
