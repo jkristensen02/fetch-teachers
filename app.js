@@ -7,7 +7,7 @@ function initApp() {
   console.log("initApp: app.js is running 🎉"); // Log to the console that the app is running
 }
 async function getTeachers(){
-  const response = await fetch("https://raw.githubusercontent.com/cederdorff/race/master/data/users.json");
+  const response = await fetch("https://cederdorff/race/master/data/users.json");
   const data = await response.json();
   console.log(data);
 }
