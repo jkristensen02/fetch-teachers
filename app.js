@@ -13,3 +13,9 @@ async function getTeachers(){
   const data = await response.json();
   return data;
 }
+function displayTeachers(teachers){
+  const teachersList = document.querySelector("#teachers-list");
+  for(const teacher of teachers){
+    console.log(teacher);
+  }
+}
