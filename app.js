@@ -3,9 +3,9 @@
 window.addEventListener("load", initApp); // When the page is loaded, run initApp function
 
 // Function to initialize the Web App
-function initApp() {
+async function initApp() {
   console.log("initApp: app.js is running 🎉"); // Log to the console that the app is running
-  const teachers = getTeachers();
+  const teachers = await getTeachers();
   console.log(teachers);
 }
 async function getTeachers(){
