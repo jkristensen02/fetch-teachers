@@ -8,6 +8,7 @@ async function initApp() {
   const teachers = await getTeachers();
   console.log(teachers);
   displayTeachers(teachers);
+  displayTeachersGrid(teachers);
 }
 async function getTeachers() {
   const response = await fetch("https://raw.githubusercontent.com/cederdorff/race/master/data/users.json");
@@ -22,6 +23,22 @@ function displayTeachers(teachers) {
       <li>
         ${teacher.name} - ${teacher.email}
       </li>
+      `
+    );
+  }
+}
+function displayTeachersGrid(teachers) {
+  const teachersGrid = document.querySelector("#teachers-grid");
+
+  for (const teacher of teachers) {
+    teachersGrid.insertAdjacentHTML(
+      "beforeend",
+      /*html*/ `
+      <article class="grid-item">
+        <img src="${teacher.image}" alt="${teacher.name}" />
+        <h2>${teacher.name}</h2>
+        <p>${teacher.title}</p>
+      </article>
       `
     );
   }
