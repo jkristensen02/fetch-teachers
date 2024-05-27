@@ -8,7 +8,7 @@ function initApp() {
   getTeachers();
 }
 async function getTeachers(){
-  const response = await fetch("https://cederdorff/race/master/data/users.json");
+  const response = await fetch("https://raw.githubusercontent.com/cederdorff/race/master/data/users.json");
   const data = await response.json();
   console.log(data);
   return data;
