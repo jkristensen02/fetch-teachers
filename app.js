@@ -21,7 +21,7 @@ function displayTeachers(teachers) {
     teachersList.insertAdjacentHTML(
       "beforeend", `      
       <li>
-        ${teacher.name} - ${teacher.email}
+        ${teacher.name} - ${teacher.mail}
       </li>
       `
     );
@@ -38,6 +38,7 @@ function displayTeachersGrid(teachers) {
         <img src="${teacher.image}" alt="${teacher.name}" />
         <h2>${teacher.name}</h2>
         <p>${teacher.title}</p>
+        <a href="#">${teacher.mail}</a>
       </article>
       `
     );
