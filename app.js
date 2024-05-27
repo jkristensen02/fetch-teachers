@@ -5,11 +5,11 @@ window.addEventListener("load", initApp); // When the page is loaded, run initAp
 // Function to initialize the Web App
 function initApp() {
   console.log("initApp: app.js is running 🎉"); // Log to the console that the app is running
-  getTeachers();
+  const teachers = getTeachers();
+  console.log(teachers);
 }
 async function getTeachers(){
   const response = await fetch("https://raw.githubusercontent.com/cederdorff/race/master/data/users.json");
   const data = await response.json();
-  console.log(data);
   return data;
 }
