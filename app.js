@@ -17,6 +17,11 @@ async function getTeachers(){
 function displayTeachers(teachers){
   const teachersList = document.querySelector("#teachers-list");
   for(const teacher of teachers){
-    console.log(teacher);
+    teachersList.insertAdjacentHTML(
+      "beforeend",
+      <li>
+        ${teacher.name}
+      </li>
+    );
   }
 }
